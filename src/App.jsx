@@ -1,14 +1,24 @@
 import React,{Component} from 'react';
-import {Button} from 'antd';
+
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import routes from './config/routes'
 
 export default class App extends Component{
 
   render(){
     return (
 
-      <div>
-        <Button type="primary">阿牛</Button>
-      </div>
+     <Router>
+       <Switch>
+       {
+          routes.map((route) =>{
+            return <Route {...route}  Key={route.path}/>    
+          })
+        }
+       </Switch>
+       
+
+     </Router>
     )
   }
 }

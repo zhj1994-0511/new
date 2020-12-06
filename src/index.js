@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import store from './redux/store';
 import App from './App';
-//import reportWebVitals from './reportWebVitals';
 
-// Provider 组件给app 传入了store对象
+
 ReactDOM.render(
- <App />,document.getElementById('root')
+<Provider store={store}><App /></Provider> ,document.getElementById('root')
 );
 
 
