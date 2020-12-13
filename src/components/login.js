@@ -83,4 +83,4 @@ export default  class Login extends Component{
 }
 
 
-// 新版的antd 需要用 form.item 才会出现校验情况  学习ts
+// 新版的antd 需要用 form.item 才会出现校验情况  学习ts  this.props.history.push('/)
